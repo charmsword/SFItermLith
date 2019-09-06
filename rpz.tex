@@ -1,0 +1,66 @@
+%% Преамбула TeX-файла
+
+%[utf8x]
+% 1. Стиль и язык
+\documentclass[12pt]{G7-32} % Стиль (по умолчанию будет 14pt)
+\usepackage[T2A]{fontenc}
+\usepackage[russian]{babel}
+%\nobibliography{rpz}
+%\usepackage{bibentry}
+%\setcitestyle{authoryear, open={((},close={))}}
+
+% Остальные стандартные настройки убраны в preamble.inc.tex.
+\include{preamble.inc}
+
+% Настройки листингов.
+\include{listings.inc}
+
+% Полезные макросы листингов.
+\include{macros.inc}
+
+\begin{document}
+
+\frontmatter % выключает нумерацию ВСЕГО; здесь начинаются ненумерованные главы: реферат, введение, глоссарий, сокращения и прочее.
+
+% Команды \breakingbeforechapters и \nonbreakingbeforechapters
+% управляют разрывом страницы перед главами.
+% По-умолчанию страница разрывается.
+
+% \nobreakingbeforechapters
+% \breakingbeforechapters
+
+%\include{00-abstract}
+
+%\include{10-title}
+\tableofcontents
+
+%\include{12-intro}
+
+\mainmatter % это включает нумерацию глав и секций в документе ниже
+
+%\include{20-Ch.1}
+\include{21-Ch.1.2TEST}
+%\include{30-Ch.2}
+%\include{40-Ch.3}
+
+%\include{00-hidden}
+
+\backmatter %% Здесь заканчивается нумерованная часть документа и начинаются ссылки и
+            %% заключение
+
+%\include{80-conclusion}
+
+\include{81-biblio}
+
+\appendix   % Тут идут приложения
+
+%\include{90-appendix0}
+%\include{90-appendix1}
+%\include{91-appendix2}
+
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
